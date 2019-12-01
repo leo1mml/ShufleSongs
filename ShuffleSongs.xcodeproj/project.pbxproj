@@ -1,0 +1,498 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8A8110F023942327007609B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8110EF23942327007609B5 /* AppDelegate.swift */; };
+		8A8110F223942327007609B5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8110F123942327007609B5 /* SceneDelegate.swift */; };
+		8A8110F423942327007609B5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8110F323942327007609B5 /* ContentView.swift */; };
+		8A8110F62394232A007609B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A8110F52394232A007609B5 /* Assets.xcassets */; };
+		8A8110F92394232A007609B5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A8110F82394232A007609B5 /* Preview Assets.xcassets */; };
+		8A8110FC2394232A007609B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A8110FA2394232A007609B5 /* LaunchScreen.storyboard */; };
+		8A8111072394232A007609B5 /* ShuffleSongsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8111062394232A007609B5 /* ShuffleSongsTests.swift */; };
+		8A81111423942796007609B5 /* songData.json in Sources */ = {isa = PBXBuildFile; fileRef = 8A81111323942796007609B5 /* songData.json */; };
+		8A81111623942DF6007609B5 /* NavigationConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A81111523942DF6007609B5 /* NavigationConfigurator.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8A8111032394232A007609B5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8A8110E423942327007609B5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8A8110EB23942327007609B5;
+			remoteInfo = ShuffleSongs;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8A8110EC23942327007609B5 /* ShuffleSongs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShuffleSongs.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A8110EF23942327007609B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8A8110F123942327007609B5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		8A8110F323942327007609B5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8A8110F52394232A007609B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8A8110F82394232A007609B5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8A8110FB2394232A007609B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8A8110FD2394232A007609B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A8111022394232A007609B5 /* ShuffleSongsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShuffleSongsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A8111062394232A007609B5 /* ShuffleSongsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShuffleSongsTests.swift; sourceTree = "<group>"; };
+		8A8111082394232A007609B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A81111323942796007609B5 /* songData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = songData.json; sourceTree = "<group>"; };
+		8A81111523942DF6007609B5 /* NavigationConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationConfigurator.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8A8110E923942327007609B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A8110FF2394232A007609B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8A8110E323942327007609B5 = {
+			isa = PBXGroup;
+			children = (
+				8A8110EE23942327007609B5 /* ShuffleSongs */,
+				8A8111052394232A007609B5 /* ShuffleSongsTests */,
+				8A8110ED23942327007609B5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8A8110ED23942327007609B5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8A8110EC23942327007609B5 /* ShuffleSongs.app */,
+				8A8111022394232A007609B5 /* ShuffleSongsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8A8110EE23942327007609B5 /* ShuffleSongs */ = {
+			isa = PBXGroup;
+			children = (
+				8A81111123942745007609B5 /* Utils */,
+				8A8110EF23942327007609B5 /* AppDelegate.swift */,
+				8A8110F123942327007609B5 /* SceneDelegate.swift */,
+				8A8110F323942327007609B5 /* ContentView.swift */,
+				8A8110F52394232A007609B5 /* Assets.xcassets */,
+				8A8110FA2394232A007609B5 /* LaunchScreen.storyboard */,
+				8A8110FD2394232A007609B5 /* Info.plist */,
+				8A8110F72394232A007609B5 /* Preview Content */,
+			);
+			path = ShuffleSongs;
+			sourceTree = "<group>";
+		};
+		8A8110F72394232A007609B5 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				8A8110F82394232A007609B5 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8A8111052394232A007609B5 /* ShuffleSongsTests */ = {
+			isa = PBXGroup;
+			children = (
+				8A8111062394232A007609B5 /* ShuffleSongsTests.swift */,
+				8A8111082394232A007609B5 /* Info.plist */,
+			);
+			path = ShuffleSongsTests;
+			sourceTree = "<group>";
+		};
+		8A81111123942745007609B5 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				8A81111223942753007609B5 /* JSON */,
+				8A81111523942DF6007609B5 /* NavigationConfigurator.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		8A81111223942753007609B5 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				8A81111323942796007609B5 /* songData.json */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8A8110EB23942327007609B5 /* ShuffleSongs */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A81110B2394232A007609B5 /* Build configuration list for PBXNativeTarget "ShuffleSongs" */;
+			buildPhases = (
+				8A8110E823942327007609B5 /* Sources */,
+				8A8110E923942327007609B5 /* Frameworks */,
+				8A8110EA23942327007609B5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ShuffleSongs;
+			productName = ShuffleSongs;
+			productReference = 8A8110EC23942327007609B5 /* ShuffleSongs.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8A8111012394232A007609B5 /* ShuffleSongsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A81110E2394232A007609B5 /* Build configuration list for PBXNativeTarget "ShuffleSongsTests" */;
+			buildPhases = (
+				8A8110FE2394232A007609B5 /* Sources */,
+				8A8110FF2394232A007609B5 /* Frameworks */,
+				8A8111002394232A007609B5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8A8111042394232A007609B5 /* PBXTargetDependency */,
+			);
+			name = ShuffleSongsTests;
+			productName = ShuffleSongsTests;
+			productReference = 8A8111022394232A007609B5 /* ShuffleSongsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8A8110E423942327007609B5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1110;
+				LastUpgradeCheck = 1110;
+				ORGANIZATIONNAME = "Leonel Menezes";
+				TargetAttributes = {
+					8A8110EB23942327007609B5 = {
+						CreatedOnToolsVersion = 11.1;
+					};
+					8A8111012394232A007609B5 = {
+						CreatedOnToolsVersion = 11.1;
+						TestTargetID = 8A8110EB23942327007609B5;
+					};
+				};
+			};
+			buildConfigurationList = 8A8110E723942327007609B5 /* Build configuration list for PBXProject "ShuffleSongs" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8A8110E323942327007609B5;
+			productRefGroup = 8A8110ED23942327007609B5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8A8110EB23942327007609B5 /* ShuffleSongs */,
+				8A8111012394232A007609B5 /* ShuffleSongsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8A8110EA23942327007609B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A8110FC2394232A007609B5 /* LaunchScreen.storyboard in Resources */,
+				8A8110F92394232A007609B5 /* Preview Assets.xcassets in Resources */,
+				8A8110F62394232A007609B5 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A8111002394232A007609B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8A8110E823942327007609B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A8110F023942327007609B5 /* AppDelegate.swift in Sources */,
+				8A8110F223942327007609B5 /* SceneDelegate.swift in Sources */,
+				8A81111423942796007609B5 /* songData.json in Sources */,
+				8A81111623942DF6007609B5 /* NavigationConfigurator.swift in Sources */,
+				8A8110F423942327007609B5 /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A8110FE2394232A007609B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A8111072394232A007609B5 /* ShuffleSongsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8A8111042394232A007609B5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8A8110EB23942327007609B5 /* ShuffleSongs */;
+			targetProxy = 8A8111032394232A007609B5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8A8110FA2394232A007609B5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8A8110FB2394232A007609B5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8A8111092394232A007609B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8A81110A2394232A007609B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8A81110C2394232A007609B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"ShuffleSongs/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = ShuffleSongs/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.leonellima.ShuffleSongs;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8A81110D2394232A007609B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"ShuffleSongs/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = ShuffleSongs/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.leonellima.ShuffleSongs;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8A81110F2394232A007609B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ShuffleSongsTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.leonellima.ShuffleSongsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShuffleSongs.app/ShuffleSongs";
+			};
+			name = Debug;
+		};
+		8A8111102394232A007609B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ShuffleSongsTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.leonellima.ShuffleSongsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShuffleSongs.app/ShuffleSongs";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8A8110E723942327007609B5 /* Build configuration list for PBXProject "ShuffleSongs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A8111092394232A007609B5 /* Debug */,
+				8A81110A2394232A007609B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8A81110B2394232A007609B5 /* Build configuration list for PBXNativeTarget "ShuffleSongs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A81110C2394232A007609B5 /* Debug */,
+				8A81110D2394232A007609B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8A81110E2394232A007609B5 /* Build configuration list for PBXNativeTarget "ShuffleSongsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A81110F2394232A007609B5 /* Debug */,
+				8A8111102394232A007609B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8A8110E423942327007609B5 /* Project object */;
+}
