@@ -9,26 +9,49 @@
 import SwiftUI
 
 struct ContentView: View {
+    var songs: [SongViewModel] = [
+        SongViewModel(id: 0,
+                      photoUrl: "ads",
+                      title: "asdfoak",
+                      artist: "aosidfjaois")
+    ]
+   
     var body: some View {
         NavigationView {
-            List {
-                HStack {
-                   Image("foto")
-                       .resizable()
-                       .frame(width: 80, height: 80)
-                        .aspectRatio(contentMode: ContentMode.fill)
-                        .cornerRadius(10)
-                        .padding()
-                   VStack {
-                       Text("Song Name")
-                        .foregroundColor(.purple)
-                       Text("Artist Name")
-                        .foregroundColor(.blue)
-                    }.lineSpacing(16)
-                   Spacer()
-                }
+            List(songs) { song in
+                SongCell(songViewModel: song)
             }.navigationBarTitle(Text("Shuffle Songs"))
             .navigationBarItems(trailing: Text("Random"))
+        }
+    }
+}
+
+struct SongViewModel: Identifiable {
+    let id: Int
+    let photoUrl: String
+    let title: String
+    let artist: String
+}
+
+struct SongCell: View {
+    
+    let songViewModel: SongViewModel
+    
+    var body: some View {
+        HStack {
+           Image("foto")
+               .resizable()
+               .frame(width: 80, height: 80)
+                .aspectRatio(contentMode: ContentMode.fill)
+                .cornerRadius(10)
+                .padding()
+            VStack(alignment: .leading) {
+               Text("Song Name")
+                .font(.title)
+               Text("Artist Name")
+                .font(.headline)
+            }.lineSpacing(16)
+           Spacer()
         }
     }
 }

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A1E64B423945FBA00E37FB4 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1E64B323945FBA00E37FB4 /* ImageDownloader.swift */; };
+		8A1E64B72394602E00E37FB4 /* DataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1E64B62394602E00E37FB4 /* DataTask.swift */; };
+		8A1E64B92394605A00E37FB4 /* ImageDownloadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1E64B82394605A00E37FB4 /* ImageDownloadData.swift */; };
+		8A1E64BD2394609900E37FB4 /* ImageError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1E64BC2394609900E37FB4 /* ImageError.swift */; };
 		8A8110F023942327007609B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8110EF23942327007609B5 /* AppDelegate.swift */; };
 		8A8110F223942327007609B5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8110F123942327007609B5 /* SceneDelegate.swift */; };
 		8A8110F423942327007609B5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8110F323942327007609B5 /* ContentView.swift */; };
@@ -28,6 +32,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8A1E64B323945FBA00E37FB4 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
+		8A1E64B62394602E00E37FB4 /* DataTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTask.swift; sourceTree = "<group>"; };
+		8A1E64B82394605A00E37FB4 /* ImageDownloadData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloadData.swift; sourceTree = "<group>"; };
+		8A1E64BC2394609900E37FB4 /* ImageError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageError.swift; sourceTree = "<group>"; };
 		8A8110EC23942327007609B5 /* ShuffleSongs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShuffleSongs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A8110EF23942327007609B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8A8110F123942327007609B5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +68,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8A1E64BE239460AD00E37FB4 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				8A1E64BC2394609900E37FB4 /* ImageError.swift */,
+				8A1E64B82394605A00E37FB4 /* ImageDownloadData.swift */,
+				8A1E64B323945FBA00E37FB4 /* ImageDownloader.swift */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
 		8A8110E323942327007609B5 = {
 			isa = PBXGroup;
 			children = (
@@ -113,7 +131,9 @@
 		8A81111123942745007609B5 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				8A1E64BE239460AD00E37FB4 /* Image */,
 				8A81111223942753007609B5 /* JSON */,
+				8A1E64B62394602E00E37FB4 /* DataTask.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -227,7 +247,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A1E64BD2394609900E37FB4 /* ImageError.swift in Sources */,
+				8A1E64B72394602E00E37FB4 /* DataTask.swift in Sources */,
 				8A8110F023942327007609B5 /* AppDelegate.swift in Sources */,
+				8A1E64B423945FBA00E37FB4 /* ImageDownloader.swift in Sources */,
+				8A1E64B92394605A00E37FB4 /* ImageDownloadData.swift in Sources */,
 				8A8110F223942327007609B5 /* SceneDelegate.swift in Sources */,
 				8A81111423942796007609B5 /* songData.json in Sources */,
 				8A8110F423942327007609B5 /* ContentView.swift in Sources */,
