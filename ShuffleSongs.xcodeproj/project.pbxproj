@@ -15,7 +15,6 @@
 		8A8110FC2394232A007609B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A8110FA2394232A007609B5 /* LaunchScreen.storyboard */; };
 		8A8111072394232A007609B5 /* ShuffleSongsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8111062394232A007609B5 /* ShuffleSongsTests.swift */; };
 		8A81111423942796007609B5 /* songData.json in Sources */ = {isa = PBXBuildFile; fileRef = 8A81111323942796007609B5 /* songData.json */; };
-		8A81111623942DF6007609B5 /* NavigationConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A81111523942DF6007609B5 /* NavigationConfigurator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +40,6 @@
 		8A8111062394232A007609B5 /* ShuffleSongsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShuffleSongsTests.swift; sourceTree = "<group>"; };
 		8A8111082394232A007609B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A81111323942796007609B5 /* songData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = songData.json; sourceTree = "<group>"; };
-		8A81111523942DF6007609B5 /* NavigationConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationConfigurator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,7 +114,6 @@
 			isa = PBXGroup;
 			children = (
 				8A81111223942753007609B5 /* JSON */,
-				8A81111523942DF6007609B5 /* NavigationConfigurator.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -233,7 +230,6 @@
 				8A8110F023942327007609B5 /* AppDelegate.swift in Sources */,
 				8A8110F223942327007609B5 /* SceneDelegate.swift in Sources */,
 				8A81111423942796007609B5 /* songData.json in Sources */,
-				8A81111623942DF6007609B5 /* NavigationConfigurator.swift in Sources */,
 				8A8110F423942327007609B5 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
