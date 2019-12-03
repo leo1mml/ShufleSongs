@@ -10,7 +10,7 @@ class BadUrlImageDownloaderTests: XCTestCase {
     
     override func setUp() {
         let successImage = UIImage(named: "shuffle",
-                                         in: Bundle(for: SuccessImageDownloadTests.self),
+                                         in: Bundle(for: BadUrlImageDownloaderTests.self),
                                          compatibleWith: nil)!
         let imageData = successImage.pngData()!
         let dataTask = ImageDataTaskStub(result: .success(imageData))

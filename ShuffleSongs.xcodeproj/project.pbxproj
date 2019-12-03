@@ -26,6 +26,7 @@
 		8AAE560F2395EE9400D0BBB6 /* FailingRequestImageDownloaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAE560E2395EE9400D0BBB6 /* FailingRequestImageDownloaderTests.swift */; };
 		8AAE56112395F4DA00D0BBB6 /* SongsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAE56102395F4D900D0BBB6 /* SongsResponse.swift */; };
 		8AAE56152395F87100D0BBB6 /* SongsData.json in Resources */ = {isa = PBXBuildFile; fileRef = 8AAE56142395F87100D0BBB6 /* SongsData.json */; };
+		8AAE56182395FCA400D0BBB6 /* SongsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAE56172395FCA400D0BBB6 /* SongsManager.swift */; };
 		8AB08B052394898D00D92EAA /* SongCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB08B042394898D00D92EAA /* SongCell.swift */; };
 		8AB08B07239489D100D92EAA /* SongViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB08B06239489D100D92EAA /* SongViewModel.swift */; };
 		8AB08B0A2395D4B200D92EAA /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB08B092395D4B200D92EAA /* Song.swift */; };
@@ -66,6 +67,7 @@
 		8AAE560E2395EE9400D0BBB6 /* FailingRequestImageDownloaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailingRequestImageDownloaderTests.swift; sourceTree = "<group>"; };
 		8AAE56102395F4D900D0BBB6 /* SongsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsResponse.swift; sourceTree = "<group>"; };
 		8AAE56142395F87100D0BBB6 /* SongsData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SongsData.json; sourceTree = "<group>"; };
+		8AAE56172395FCA400D0BBB6 /* SongsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsManager.swift; sourceTree = "<group>"; };
 		8AB08B042394898D00D92EAA /* SongCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongCell.swift; sourceTree = "<group>"; };
 		8AB08B06239489D100D92EAA /* SongViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongViewModel.swift; sourceTree = "<group>"; };
 		8AB08B092395D4B200D92EAA /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 		8A1E64C423946A4E00E37FB4 /* Shufle List */ = {
 			isa = PBXGroup;
 			children = (
+				8AAE56162395FC9300D0BBB6 /* Utils */,
 				8AB08B0C2395D64900D92EAA /* Service */,
 				8AB08B0B2395D63E00D92EAA /* View */,
 			);
@@ -222,6 +225,14 @@
 				8AAE56042395DB8100D0BBB6 /* ImageDataTaskStub.swift */,
 			);
 			path = TestDoubles;
+			sourceTree = "<group>";
+		};
+		8AAE56162395FC9300D0BBB6 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				8AAE56172395FCA400D0BBB6 /* SongsManager.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		8AB08B082395D4A700D92EAA /* Model */ = {
@@ -366,6 +377,7 @@
 				8AB08B052394898D00D92EAA /* SongCell.swift in Sources */,
 				8A8110F423942327007609B5 /* ContentView.swift in Sources */,
 				8AB08B07239489D100D92EAA /* SongViewModel.swift in Sources */,
+				8AAE56182395FCA400D0BBB6 /* SongsManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

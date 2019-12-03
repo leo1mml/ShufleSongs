@@ -1,57 +1,31 @@
-//
-//  ContentView.swift
-//  ShuffleSongs
-//
-//  Created by Leonel Menezes on 01/12/19.
-//  Copyright © 2019 Leonel Menezes. All rights reserved.
-//
-
 import SwiftUI
 
 struct ContentView: View {
-    
-    let songsService: SongsService
-    
-    @State
-    var songs: [SongViewModel] = [
-        SongViewModel(id: 0,
-                      photoUrl: "https://animystic.com.br/wp-content/uploads/2019/05/gohan_0.jpg",
-                      title: "Chala Head'Chala",
-                      artist: "Dragon Ball")
-    ]
+    @ObservedObject
+    var songManager: SongsManager
     
     @State
     private var isShowingResults: Bool = true
-   
+    
     var body: some View {
         NavigationView {
-            List(songs) { song in
+            List(songManager.songs) { song in
                 SongCell(songViewModel: song)
             }.navigationBarTitle(Text("Shuffle Songs"))
-            .navigationBarItems(trailing: Text("Random"))
+                .navigationBarItems(trailing: Text("Random").onTapGesture {
+                    print("opaa")
+                })
         }.onAppear {
-            self.getSongs()
-        }
-    }
-    
-    private func getSongs() {
-        self.songsService.getSongs(for: "", completion: { result in
-            switch result {
-            case let .success(songsModels):
-                self.songs = songsModels.map { SongViewModel(id: $0.id,
-                                                             photoUrl: $0.artworkUrl,
-                                                             title: $0.trackName ?? "undefined",
-                                                             artist: $0.artistName) }
-            case .failure:
+            self.songManager.getSongs(for: "", onError: {
                 self.isShowingResults = false
-            }
-        })
+            })
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(songsService: DumbService())
+        ContentView(songManager: SongsManager(service: DumbService()))
             .background(Color.black)
     }
 }
