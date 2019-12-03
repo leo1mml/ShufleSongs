@@ -3,7 +3,6 @@ import Foundation
 final class SongsServiceImp: SongsService {
     
     func getSongs(for ids: [String], songsPerArtist: Int, completion: @escaping (Result<[Song], Error>) -> Void) {
-        
         if let url = getUrl(for: ids, songsPerArtist: songsPerArtist) {
             URLSession.shared.dataTask(with: url) { (data, response, error) in
                 DispatchQueue.main.async {

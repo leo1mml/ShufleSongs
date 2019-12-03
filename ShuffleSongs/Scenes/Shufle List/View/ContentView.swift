@@ -14,7 +14,7 @@ struct ContentView: View {
                 SongCell(songViewModel: song)
             }.navigationBarTitle(Text("Shuffle Songs"))
                 .navigationBarItems(trailing: Text("Random").onTapGesture {
-                    print("opaa")
+                    self.songManager.randomizeItems()
                 })
         }.onAppear {
             self.songManager.getSongs(for: self.artistIds, songsPerArtist: 5, onError: {

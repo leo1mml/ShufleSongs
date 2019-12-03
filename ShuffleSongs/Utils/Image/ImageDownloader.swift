@@ -7,6 +7,7 @@ final class ImageDownloader: ObservableObject {
     @Published
     private(set) var storedImage: Image
     private let dataTask: DataTask
+    private var imageCache = NSCache<NSString, UIImage>()
     
     init(defaultImageName: String, dataTask: DataTask) {
         storedImage = Image(defaultImageName)
@@ -15,6 +16,10 @@ final class ImageDownloader: ObservableObject {
     
     func getImageFrom(url: String,
                       onError: @escaping (Error) -> Void = {_ in }) {
+        if let image = imageCache.object(forKey: NSString(string: url)) {
+            storedImage = Image(uiImage: image)
+            return
+        }
         guard let url = URL(string: url) else {
             onError(URLError(.badURL))
             return
@@ -26,23 +31,24 @@ final class ImageDownloader: ObservableObject {
         dataTask.getData(from: url) { result in
             switch result {
             case let .success(data):
-                self.tryToSetImage(imageData: data, onError: onError)
+                self.tryToSetImage(imageData: data, imageUrl: url.absoluteString as NSString, onError: onError)
             case let .failure(error):
                 onError(error)
             }
         }
     }
     
-    private func tryToSetImage(imageData: Data, onError: (Error) -> Void) {
+    private func tryToSetImage(imageData: Data, imageUrl: NSString, onError: (Error) -> Void) {
         do {
-            storedImage = try getImageFrom(data: imageData)
+            storedImage = try getImageFrom(data: imageData, caching: imageUrl)
         } catch {
             onError(error)
         }
     }
 
-    private func getImageFrom(data: Data) throws -> Image  {
+    private func getImageFrom(data: Data, caching key: NSString) throws -> Image  {
         if let uiImage = UIImage(data: data) {
+            imageCache.setObject(uiImage, forKey: key)
             return Image(uiImage: uiImage)
         }
         throw ImageError.invalidDataFormat
