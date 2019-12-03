@@ -29,7 +29,7 @@ final class RandomizeItemsTests: XCTestCase {
     func testDoesNotContainSameArtistTwiceInARow() {
         for (index, song) in sut.songs.enumerated() {
             if index + 1 == sut.songs.count {
-                continue
+                break
             }
             if song.artist == sut.songs[index + 1].artist {
                 XCTFail()

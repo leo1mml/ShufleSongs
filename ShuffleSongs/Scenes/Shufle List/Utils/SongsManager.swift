@@ -37,7 +37,8 @@ final class SongsManager: ObservableObject {
     func randomizeItems() {
         var randomizedSongs = songModels
         for (index, song) in songModels.enumerated() {
-            if index == songModels.count - 1 {
+            let isLastItem = index == songModels.count - 1
+            if isLastItem {
                 break
             }
             var visitedIndexes = Set<Int>()
