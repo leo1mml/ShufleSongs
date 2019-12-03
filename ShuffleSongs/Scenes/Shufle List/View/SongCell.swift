@@ -21,7 +21,9 @@ struct SongCell: View {
             }.lineSpacing(16)
            Spacer()
         }.onAppear {
-            self.imageDownloader.getImageFrom(url: self.songViewModel.photoUrl)
+            if let url = self.songViewModel.photoUrl {
+                self.imageDownloader.getImageFrom(url: url)
+            }
         }
     }
 }

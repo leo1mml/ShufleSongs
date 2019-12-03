@@ -26,9 +26,7 @@ final class ImageDownloader: ObservableObject {
         dataTask.getData(from: url) { result in
             switch result {
             case let .success(data):
-                DispatchQueue.main.async {
-                    self.tryToSetImage(imageData: data, onError: onError)
-                }
+                self.tryToSetImage(imageData: data, onError: onError)
             case let .failure(error):
                 onError(error)
             }
