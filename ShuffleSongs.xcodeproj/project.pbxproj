@@ -27,6 +27,7 @@
 		8AAE56112395F4DA00D0BBB6 /* SongsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAE56102395F4D900D0BBB6 /* SongsResponse.swift */; };
 		8AAE56152395F87100D0BBB6 /* SongsData.json in Resources */ = {isa = PBXBuildFile; fileRef = 8AAE56142395F87100D0BBB6 /* SongsData.json */; };
 		8AAE56182395FCA400D0BBB6 /* SongsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAE56172395FCA400D0BBB6 /* SongsManager.swift */; };
+		8AAE561A2396075400D0BBB6 /* SongsServiceImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAE56192396075400D0BBB6 /* SongsServiceImp.swift */; };
 		8AB08B052394898D00D92EAA /* SongCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB08B042394898D00D92EAA /* SongCell.swift */; };
 		8AB08B07239489D100D92EAA /* SongViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB08B06239489D100D92EAA /* SongViewModel.swift */; };
 		8AB08B0A2395D4B200D92EAA /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB08B092395D4B200D92EAA /* Song.swift */; };
@@ -68,6 +69,7 @@
 		8AAE56102395F4D900D0BBB6 /* SongsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsResponse.swift; sourceTree = "<group>"; };
 		8AAE56142395F87100D0BBB6 /* SongsData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SongsData.json; sourceTree = "<group>"; };
 		8AAE56172395FCA400D0BBB6 /* SongsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsManager.swift; sourceTree = "<group>"; };
+		8AAE56192396075400D0BBB6 /* SongsServiceImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsServiceImp.swift; sourceTree = "<group>"; };
 		8AB08B042394898D00D92EAA /* SongCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongCell.swift; sourceTree = "<group>"; };
 		8AB08B06239489D100D92EAA /* SongViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongViewModel.swift; sourceTree = "<group>"; };
 		8AB08B092395D4B200D92EAA /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 		8A8111052394232A007609B5 /* ShuffleSongsTests */ = {
 			isa = PBXGroup;
 			children = (
+				8AAE561B2396114800D0BBB6 /* Scenes */,
 				8AAE56002395DA6A00D0BBB6 /* ImageDonwloaderTests */,
 				8A8111062394232A007609B5 /* ShuffleSongsTests.swift */,
 				8A8111082394232A007609B5 /* Info.plist */,
@@ -235,6 +238,37 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		8AAE561B2396114800D0BBB6 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				8AAE561C2396115500D0BBB6 /* Shuffle List */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		8AAE561C2396115500D0BBB6 /* Shuffle List */ = {
+			isa = PBXGroup;
+			children = (
+				8AAE561E2396117F00D0BBB6 /* Service */,
+				8AAE561D2396117100D0BBB6 /* Utils */,
+			);
+			path = "Shuffle List";
+			sourceTree = "<group>";
+		};
+		8AAE561D2396117100D0BBB6 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		8AAE561E2396117F00D0BBB6 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		8AB08B082395D4A700D92EAA /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -258,6 +292,7 @@
 			isa = PBXGroup;
 			children = (
 				8AB08B0D2395D66200D92EAA /* SongsService.swift */,
+				8AAE56192396075400D0BBB6 /* SongsServiceImp.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -376,6 +411,7 @@
 				8A1E64C12394676A00E37FB4 /* ImageDataTask.swift in Sources */,
 				8AB08B052394898D00D92EAA /* SongCell.swift in Sources */,
 				8A8110F423942327007609B5 /* ContentView.swift in Sources */,
+				8AAE561A2396075400D0BBB6 /* SongsServiceImp.swift in Sources */,
 				8AB08B07239489D100D92EAA /* SongViewModel.swift in Sources */,
 				8AAE56182395FCA400D0BBB6 /* SongsManager.swift in Sources */,
 			);

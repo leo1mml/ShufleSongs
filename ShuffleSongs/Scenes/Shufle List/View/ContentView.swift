@@ -3,6 +3,7 @@ import SwiftUI
 struct ContentView: View {
     @ObservedObject
     var songManager: SongsManager
+    let artistIds: [String]
     
     @State
     private var isShowingResults: Bool = true
@@ -16,7 +17,7 @@ struct ContentView: View {
                     print("opaa")
                 })
         }.onAppear {
-            self.songManager.getSongs(for: "", onError: {
+            self.songManager.getSongs(for: self.artistIds, songsPerArtist: 5, onError: {
                 self.isShowingResults = false
             })
         }
@@ -25,13 +26,13 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(songManager: SongsManager(service: DumbService()))
+        ContentView(songManager: SongsManager(service: DumbService()), artistIds: [])
             .background(Color.black)
     }
 }
 
 class DumbService: SongsService {
-    func getSongs(for url: String, completion: @escaping (Result<[Song], Error>) -> Void) {
+    func getSongs(for ids: [String], songsPerArtist: Int, completion: @escaping (Result<[Song], Error>) -> Void) {
         do {
             if let url = Bundle.main.url(forResource: "SongsData", withExtension: "json") {
                 let dataJson = try Data(contentsOf: url)

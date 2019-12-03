@@ -11,8 +11,8 @@ final class SongsManager: ObservableObject {
         self.service = service
     }
     
-    func getSongs(for url: String, onError: @escaping () -> Void) {
-        service.getSongs(for: url, completion: { [weak self] result in
+    func getSongs(for ids: [String], songsPerArtist: Int, onError: @escaping () -> Void) {
+        service.getSongs(for: ids, songsPerArtist: songsPerArtist, completion: { [weak self] result in
             guard let self = self else { return }
             switch result {
             case let .success(songModels):
