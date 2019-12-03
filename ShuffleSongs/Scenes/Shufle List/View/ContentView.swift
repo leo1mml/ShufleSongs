@@ -14,7 +14,7 @@ struct ContentView: View {
                 SongCell(songViewModel: song)
             }.navigationBarTitle(Text("Shuffle Songs"))
                 .navigationBarItems(trailing: Image("ic-shuffle")
-                    .resizable().frame(width: 30, height: 25).onTapGesture {
+                    .resizable().frame(width: 35, height: 30).onTapGesture {
                         self.songManager.randomizeItems()
                 })
         }.onAppear {
