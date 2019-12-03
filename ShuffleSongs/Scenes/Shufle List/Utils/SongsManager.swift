@@ -20,7 +20,7 @@ final class SongsManager: ObservableObject {
             guard let self = self else { return }
             switch result {
             case let .success(songModels):
-                self.songModels = songModels
+                self.songModels = songModels.filter({$0.trackName != nil})
             case .failure:
                 onError()
             }
@@ -28,10 +28,10 @@ final class SongsManager: ObservableObject {
     }
     
     private func getViewModels(for songs: [Song]) -> [SongViewModel] {
-        return songs.filter({$0.trackName != nil}).map { SongViewModel(id: $0.id,
-                                                                       photoUrl: $0.artworkUrl,
-                                                                       title: $0.trackName!,
-                                                                       artist: $0.artistName) }
+        return songs.map { SongViewModel(id: $0.id,
+                                         photoUrl: $0.artworkUrl,
+                                         title: $0.trackName!,
+                                         artist: $0.artistName) }
     }
     
     func randomizeItems() {
@@ -40,19 +40,33 @@ final class SongsManager: ObservableObject {
             if index == songModels.count - 1 {
                 break
             }
-            let randomIndex = Int.random(in: (index + 1) ... songModels.count - 1)
-            let randomElement = songModels[randomIndex]
+            var visitedIndexes = Set<Int>()
+            let availableIndexesAmount = songModels.count - (index + 1)
+            var randomElement: (index: Int, song: Song)
+            var hasInvalidElement: Bool = false
+            repeat {
+                randomElement = getRandomElement(of: randomizedSongs, minimumPosition: index + 1)
+                visitedIndexes.insert(randomElement.index)
+                let isDifferentFromPreviousOne = index == 0 ? false : randomizedSongs[index - 1].artistName != randomElement.song.artistName
+                let isTheSameArtist = song.artistName == randomElement.song.artistName
+                let hasVisitedAllPossibleIndexes = (visitedIndexes.count < availableIndexesAmount)
+                hasInvalidElement = hasVisitedAllPossibleIndexes && (!isDifferentFromPreviousOne || isTheSameArtist)
+            } while hasInvalidElement
             
-            let isNotLastElement = index < songModels.count
-            let hasTheSameArtistNameOnTheNextItem = songModels[index + 1].artistName == song.artistName
-            let randomElementHasDifferentArtist = song.artistName != randomElement.artistName
-            
-            if isNotLastElement && hasTheSameArtistNameOnTheNextItem && randomElementHasDifferentArtist {
-                let tempSong = song
-                randomizedSongs[index] = randomElement
-                randomizedSongs[randomIndex] = tempSong
-            }
+            swap(array: &randomizedSongs, firstPosition: index, secondPosition: randomElement.index)
         }
         self.songModels = randomizedSongs
+    }
+    
+    private func swap(array: inout [Song], firstPosition: Int, secondPosition: Int) {
+        let tempSong = array[firstPosition]
+        array[firstPosition] = array[secondPosition]
+        array[secondPosition] = tempSong
+    }
+    
+    private func getRandomElement(of songs: [Song], minimumPosition: Int) -> (song: Song, index: Int) {
+        let maximumIndex = (songs.count-1)
+        let randomIndex = Int.random(in: minimumPosition...maximumIndex)
+        return (song: songs[randomIndex], index: randomIndex)
     }
 }
