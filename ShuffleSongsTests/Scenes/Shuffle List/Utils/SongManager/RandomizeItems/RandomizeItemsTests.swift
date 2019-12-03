@@ -25,4 +25,15 @@ final class RandomizeItemsTests: XCTestCase {
         XCTAssertTrue(notRandomizedSongs[0].artist != sut.songs[0].artist)
         XCTAssertTrue(notRandomizedSongs[0].title != sut.songs[0].title)
     }
+    
+    func testDoesNotContainSameArtistTwiceInARow() {
+        for (index, song) in sut.songs.enumerated() {
+            if index + 1 == sut.songs.count {
+                continue
+            }
+            if song.artist == sut.songs[index + 1].artist {
+                XCTFail()
+            }
+        }
+    }
 }
