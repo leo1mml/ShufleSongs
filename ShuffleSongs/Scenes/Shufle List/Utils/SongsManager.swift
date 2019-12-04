@@ -37,9 +37,9 @@ final class SongsManager: ObservableObject {
     func randomizeItems() {
         var randomizedSongs: [Song] = []
         var artistsSongsDictionary = getDictionary(for: songModels)
-        
-        var artistNames: [String] = []
+
         repeat {
+            var artistNames: [String]
             let isFirstLoop = randomizedSongs.isEmpty
             var isCollidingElements: Bool
             repeat {
