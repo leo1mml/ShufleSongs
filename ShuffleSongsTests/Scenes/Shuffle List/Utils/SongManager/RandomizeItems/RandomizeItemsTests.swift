@@ -39,6 +39,16 @@ final class RandomizeItemsTests: XCTestCase {
         }
     }
     
+    func testOrderIsDifferentFromPreviousList() {
+        for (index, element) in sut.songs.enumerated() {
+            if element.artist != notRandomizedSongs[index].artist ||
+                element.title != notRandomizedSongs[index].title {
+                return
+            }
+        }
+        XCTFail()
+    }
+    
     func testContainsAllPreviousItems() {
         for element in sut.songs {
             let containsElement = notRandomizedSongs.contains(where: {
