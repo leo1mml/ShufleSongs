@@ -45,10 +45,9 @@ final class SongsManager: ObservableObject {
             repeat {
                 artistNames = Array(artistsSongsDictionary.keys).shuffled()
                 isCollidingElements = isFirstLoop ? false : artistNames[0] == randomizedSongs[randomizedSongs.count - 1].artistName
-            } while isCollidingElements
+            } while isCollidingElements && artistsSongsDictionary.count > 1
             
-            let namesCopy = artistNames
-            for name in namesCopy {
+            for name in artistNames {
                 guard var songArray = artistsSongsDictionary[name] else { return }
                 let songToAdd = songArray.removeLast()
                 artistsSongsDictionary[name] = songArray
