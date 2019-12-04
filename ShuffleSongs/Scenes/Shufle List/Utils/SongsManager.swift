@@ -49,9 +49,9 @@ final class SongsManager: ObservableObject {
             
             for name in artistNames {
                 guard var songArray = artistsSongsDictionary[name] else { return }
-                let songToAdd = songArray.removeLast()
+                randomizedSongs.append(songArray.removeLast())
                 artistsSongsDictionary[name] = songArray
-                randomizedSongs.append(songToAdd)
+                
                 if songArray.isEmpty {
                     artistsSongsDictionary.removeValue(forKey: name)
                     break
