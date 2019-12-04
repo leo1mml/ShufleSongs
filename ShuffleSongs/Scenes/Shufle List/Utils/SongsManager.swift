@@ -40,22 +40,16 @@ final class SongsManager: ObservableObject {
         
         var artistNames: [String] = []
         repeat {
-            if randomizedSongs.isEmpty {
+            let isFirstLoop = randomizedSongs.isEmpty
+            var isCollidingElements: Bool
+            repeat {
                 artistNames = Array(artistsSongsDictionary.keys).shuffled()
-            } else {
-                var isCollidingElements: Bool
-                repeat {
-                    artistNames = Array(artistsSongsDictionary.keys).shuffled()
-                    isCollidingElements = artistNames[0] == randomizedSongs[randomizedSongs.count - 1].artistName
-                } while isCollidingElements
-            }
+                isCollidingElements = isFirstLoop ? false : artistNames[0] == randomizedSongs[randomizedSongs.count - 1].artistName
+            } while isCollidingElements
             
             let namesCopy = artistNames
             for name in namesCopy {
-                guard var songArray = artistsSongsDictionary[name], !songArray.isEmpty else {
-                    artistsSongsDictionary.removeValue(forKey: name)
-                    break
-                }
+                guard var songArray = artistsSongsDictionary[name] else { return }
                 let songToAdd = songArray.removeLast()
                 artistsSongsDictionary[name] = songArray
                 randomizedSongs.append(songToAdd)

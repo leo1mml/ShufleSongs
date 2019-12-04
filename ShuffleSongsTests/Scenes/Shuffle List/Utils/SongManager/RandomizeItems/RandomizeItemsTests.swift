@@ -38,4 +38,14 @@ final class RandomizeItemsTests: XCTestCase {
             testDoesNotContainSameArtistTwiceInARow()
         }
     }
+    
+    func testContainsAllPreviousItems() {
+        for element in sut.songs {
+            let containsElement = notRandomizedSongs.contains(where: {
+                $0.artist == element.artist &&
+                    $0.title == element.title
+            })
+            XCTAssertTrue(containsElement)
+        }
+    }
 }
