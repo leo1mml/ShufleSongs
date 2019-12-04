@@ -35,39 +35,44 @@ final class SongsManager: ObservableObject {
     }
     
     func randomizeItems() {
-        var randomizedSongs = songModels
-        for (index, song) in songModels.enumerated() {
-            let isLastItem = index == songModels.count - 1
-            if isLastItem {
-                break
+        var randomizedSongs: [Song] = []
+        var artistsSongsDictionary = getDictionary(for: songModels)
+        
+        var artistNames: [String] = []
+        repeat {
+            if randomizedSongs.isEmpty {
+                artistNames = Array(artistsSongsDictionary.keys).shuffled()
+            } else {
+                var isCollidingElements: Bool
+                repeat {
+                    artistNames = Array(artistsSongsDictionary.keys).shuffled()
+                    isCollidingElements = artistNames[0] == randomizedSongs[randomizedSongs.count - 1].artistName
+                } while isCollidingElements
             }
-            var visitedIndexes = Set<Int>()
-            let availableIndexesAmount = songModels.count - (index + 1)
-            var randomElement: (index: Int, song: Song)
-            var hasInvalidElement: Bool = false
-            repeat {
-                randomElement = getRandomElement(of: randomizedSongs, minimumPosition: index + 1)
-                visitedIndexes.insert(randomElement.index)
-                let isDifferentFromPreviousOne = index == 0 ? false : randomizedSongs[index - 1].artistName != randomElement.song.artistName
-                let isTheSameArtist = song.artistName == randomElement.song.artistName
-                let hasVisitedAllPossibleIndexes = (visitedIndexes.count < availableIndexesAmount)
-                hasInvalidElement = hasVisitedAllPossibleIndexes && (!isDifferentFromPreviousOne || isTheSameArtist)
-            } while hasInvalidElement
             
-            swap(array: &randomizedSongs, firstPosition: index, secondPosition: randomElement.index)
-        }
+            let namesCopy = artistNames
+            for name in namesCopy {
+                guard var songArray = artistsSongsDictionary[name], !songArray.isEmpty else {
+                    artistsSongsDictionary.removeValue(forKey: name)
+                    break
+                }
+                let songToAdd = songArray.removeLast()
+                artistsSongsDictionary[name] = songArray
+                randomizedSongs.append(songToAdd)
+                if songArray.isEmpty {
+                    artistsSongsDictionary.removeValue(forKey: name)
+                    break
+                }
+            }
+        } while !artistsSongsDictionary.isEmpty
         self.songModels = randomizedSongs
     }
     
-    private func swap(array: inout [Song], firstPosition: Int, secondPosition: Int) {
-        let tempSong = array[firstPosition]
-        array[firstPosition] = array[secondPosition]
-        array[secondPosition] = tempSong
-    }
-    
-    private func getRandomElement(of songs: [Song], minimumPosition: Int) -> (song: Song, index: Int) {
-        let maximumIndex = (songs.count-1)
-        let randomIndex = Int.random(in: minimumPosition...maximumIndex)
-        return (song: songs[randomIndex], index: randomIndex)
+    private func getDictionary(for songs: [Song]) -> [String: [Song]] {
+        var artistsSongsDictionary: [String: [Song]] = [:]
+        songs.forEach {
+            artistsSongsDictionary[$0.artistName] = (artistsSongsDictionary[$0.artistName] ?? []) + [$0]
+        }
+        return artistsSongsDictionary
     }
 }
