@@ -38,6 +38,7 @@
 		8AB08B07239489D100D92EAA /* SongViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB08B06239489D100D92EAA /* SongViewModel.swift */; };
 		8AB08B0A2395D4B200D92EAA /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB08B092395D4B200D92EAA /* Song.swift */; };
 		8AB08B0E2395D66200D92EAA /* SongsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB08B0D2395D66200D92EAA /* SongsService.swift */; };
+		8ABAD4C823973E8E009084B0 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABAD4C723973E8E009084B0 /* ImageCache.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,7 @@
 		8AB08B06239489D100D92EAA /* SongViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongViewModel.swift; sourceTree = "<group>"; };
 		8AB08B092395D4B200D92EAA /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		8AB08B0D2395D66200D92EAA /* SongsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsService.swift; sourceTree = "<group>"; };
+		8ABAD4C723973E8E009084B0 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 			children = (
 				8A1E64BC2394609900E37FB4 /* ImageError.swift */,
 				8A1E64B323945FBA00E37FB4 /* ImageDownloader.swift */,
+				8ABAD4C723973E8E009084B0 /* ImageCache.swift */,
 			);
 			path = Image;
 			sourceTree = "<group>";
@@ -466,6 +469,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8ABAD4C823973E8E009084B0 /* ImageCache.swift in Sources */,
 				8AB08B0E2395D66200D92EAA /* SongsService.swift in Sources */,
 				8A1E64BD2394609900E37FB4 /* ImageError.swift in Sources */,
 				8AAE56112395F4DA00D0BBB6 /* SongsResponse.swift in Sources */,

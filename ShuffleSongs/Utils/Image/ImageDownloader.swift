@@ -7,7 +7,6 @@ final class ImageDownloader: ObservableObject {
     @Published
     private(set) var storedImage: Image
     private let dataTask: DataTask
-    private var imageCache = NSCache<NSString, UIImage>()
     
     init(defaultImageName: String, dataTask: DataTask) {
         storedImage = Image(defaultImageName)
@@ -16,7 +15,7 @@ final class ImageDownloader: ObservableObject {
     
     func getImageFrom(url: String,
                       onError: @escaping (Error) -> Void = {_ in }) {
-        if let image = imageCache.object(forKey: NSString(string: url)) {
+        if let image = ImageCache.shared.object(forKey: NSString(string: url)) {
             storedImage = Image(uiImage: image)
             return
         }
@@ -48,7 +47,7 @@ final class ImageDownloader: ObservableObject {
 
     private func getImageFrom(data: Data, caching key: NSString) throws -> Image  {
         if let uiImage = UIImage(data: data) {
-            imageCache.setObject(uiImage, forKey: key)
+            ImageCache.shared.setObject(uiImage, forKey: key)
             return Image(uiImage: uiImage)
         }
         throw ImageError.invalidDataFormat
